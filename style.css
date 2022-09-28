@@ -1,87 +1,263 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-  }
-  label,
-  input {
-    display: block;
-  }
-  body {
-    font-family: 'Courier New', monospace;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  header {
-    padding: 1.5rem;
-    background-color: rgb(33, 20, 55);
-    color: white;
-    
-  }
-  li:hover {
-    color: rgb(180, 90, 194);
-  }
-  .row {
-display: flex;
-flex-wrap: wrap;
-gap: 1rem;
-align-items: center;
+:root {
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
 }
 
-.right{
-justify-content: space-between;
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+label,
+input {
+  display: block;
+}
+body {
+  font-family: "Courier New", monospace;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+header {
+  padding: 1.5rem;
+  background-color: rgb(33, 20, 55);
+  color: white;
+}
+li:hover {
+  color: rgb(180, 90, 194);
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.right {
+  justify-content: space-between;
 }
 .opening-image {
-    background-color: rgb(15, 9, 25);
-    text-align: center;
+  background-color: rgb(15, 9, 25);
+  text-align: center;
 }
 .opening-image img {
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
-    position: relative;
-  }
-  
-  .opening-image .overlay {
-    position: absolute;
-    top: 30%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 30px;
-    font-family: 'Courier New', monospace;
-    font-weight: bold;
-  }
-  .opening-image .overlay2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 40px;
-    font-family: 'Courier New', monospace;
-    font-weight: bold;
-  }
-  .contact{
-    text-align: center;
-    border-color: rgb(33, 20, 55);
-    border-style: solid;
-    margin: 40px;
-    padding: 10px;
-    color: rgb(33, 20, 55);
-    line-height: 30px;
-
-  }
-  input {
-    display: block;
-    margin : 0 auto;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  position: relative;
 }
-.submit{
+
+.opening-image .overlay {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+}
+.opening-image .overlay2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 40px;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+}
+
+.team {
+  font-size: 4rem;
+  font-weight: 100;
+  padding: 10px;
+  background-color: rgb(33, 20, 55);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+h3 {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+
+.split.left {
+  left: 0;
+  background: url(img1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split.left::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(87, 84, 236, 0.7);
+}
+
+.split.right {
+  right: 0;
+  background: url(img2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split.right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(87, 84, 236, 0.7);
+}
+
+.gallery-title {
+  font-size: 4rem;
+  font-weight: 100;
+  padding: 10px;
+  background-color: rgb(33, 20, 55);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.contact {
+  text-align: center;
+  border-color: rgb(33, 20, 55);
+  border-style: solid;
+  margin: 40px;
+  padding: 10px;
+  color: rgb(33, 20, 55);
+  line-height: 30px;
+}
+input {
+  display: block;
+  margin: 0 auto;
+}
+.submit {
   margin: 0 auto;
   margin-top: 20px;
   display: block;
