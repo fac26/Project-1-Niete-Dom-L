@@ -67,3 +67,23 @@ justify-content: space-between;
     font-family: 'Courier New', monospace;
     font-weight: bold;
   }
+  .contact{
+    text-align: center;
+    border-color: rgb(33, 20, 55);
+    border-style: solid;
+    margin: 40px;
+    padding: 10px;
+    color: rgb(33, 20, 55);
+    line-height: 30px;
+
+  }
+  input {
+    display: block;
+    margin : 0 auto;
+}
+.submit{
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  padding: 10px;
+}
