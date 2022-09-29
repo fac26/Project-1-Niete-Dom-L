@@ -18,15 +18,22 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  padding: 12px;
 }
 ul {
   list-style: none;
-  padding: 0;
+  padding: 0;  
 }
 header {
-  padding: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
   background-color: rgb(33, 20, 55);
-  color: white;
+  color: white; 
+  box-shadow: 0 4px 6px 0 rgba(0,0,0,.8);
+  
 }
 li:hover {
   color: rgb(180, 90, 194);
@@ -35,7 +42,9 @@ li:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  align-items: center;
+  align-items: center; 
+  padding: 10px 0;
+  
 }
 
 .right {
