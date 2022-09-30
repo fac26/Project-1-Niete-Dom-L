@@ -63,8 +63,35 @@ margin-top: 100px;
   float: left;
   color: black;
   z-index: 100;
+  word-wrap: break-word;
+  margin-left: 10px;
+  max-width: 40%;
 
 }
+.lefttext2{
+  margin-top: 40px;
+    float: left;
+    color: black;
+    z-index: 100;
+    word-wrap: break-word;
+    margin-left: 10px;
+    max-width: 40%;
+  
+  }
+  .lefttextlink{
+    margin-top: 10px;
+      float: left;
+      color: black;
+      z-index: 100;
+      word-wrap: break-word;
+      margin-left: 10%;    
+      background-color:rgb(33, 20, 55);
+      color: white;
+      border-radius: 10px;
+    }
+    .lefttextlink:hover{
+        color: rgb(180, 90, 194); 
+      }
 
 .opening-image .overlay {
   position: absolute;
