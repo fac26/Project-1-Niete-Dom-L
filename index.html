@@ -11,7 +11,8 @@
 
   <!--Navigation Menu-->
 
-  <header class="row right">
+  <header>
+    <div class="row right">
     <a href="#home" aria-label="Home">NerdWhale</a>
     <nav>
       <ul class="row">
@@ -21,18 +22,15 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+  </div>
   </header>
 
   <!--Landing page image and text-->
 
   <section id="home" class="opening-image">
     <img class="background-image" src="https://www.superprof.co.uk/blog/wp-content/uploads/2018/07/choosing-the-right-computer-1.jpg">
-    <section class="overlay">
-  We <br></br> &ensp;&ensp; are
-    </section>
-<section class="overlay2">
-  NerdWhale
-</section>
+  <h1 class="lefttext">We make websites</h1>
+  <p class="lefttext">our websites are so special</p>
 </section>
 
 <!--Meet the Team section-->
@@ -92,22 +90,22 @@
 <section id="contact" class="contact">
   <h1>Contact us</h1>
   <form id="form" action="www.examplewebsite.com">
-    <label for="name">Name</label>
-  <input id="name" name="name" type="text">
+    <label for="name" >Name</label>
+  <input id="name" name="name" type="text" required>
   <label for="email">Email</label>
-  <input id="email" name="email" type="email">
+  <input id="email" name="email" type="email" required>
 
     <label for="tel">Telephone number</label>
-  <input id="tel" name="tel" type="text">
+  <input id="tel" name="tel" type="text" required>
 
           <label for="message">Your message</label>
-  <textarea id="message" name="message" type="text">
+  <textarea id="message" name="message" type="text" required>
     </textarea>
     <p>Who would you like to speak to?</p>
     <label for="contactniete">Niete</label>
-  <input id="contactniete" name="contact" type="radio" value="niete">
+  <input id="contactniete" name="contact" type="radio" value="niete" required>
           <label for="contactdom">Dominic</label>
-  <input id="contactdom" name="contact" type="radio" value="dom">
+  <input id="contactdom" name="contact" type="radio" value="dom" required>
   <input type="submit" class="submit">
 </form>
     </section>
