@@ -54,9 +54,16 @@ li:hover {
 .opening-image img {
   width: 50%;
   float: right;
-  height: 100%;
-  opacity: 0.2;
+  height: 400px;
+  opacity: 1;
   position: relative;
+}
+.lefttext{
+margin-top: 100px;
+  float: left;
+  color: black;
+  z-index: 100;
+
 }
 
 .opening-image .overlay {
@@ -64,7 +71,7 @@ li:hover {
   top: 30%;
   left: 40%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: black;
   font-size: 30px;
   font-family: "Courier New", monospace;
   font-weight: bold;
