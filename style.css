@@ -50,12 +50,10 @@ li:hover {
 .right {
   justify-content: space-between;
 }
-.opening-image {
-  background-color: rgb(15, 9, 25);
-  text-align: center;
-}
+
 .opening-image img {
-  width: 100%;
+  width: 50%;
+  float: right;
   height: 100%;
   opacity: 0.2;
   position: relative;
