@@ -337,3 +337,7 @@ textarea {
   display: block;
   padding: 10px;
 }
+input.radio {
+  display: inline;
+  margin: 0 auto;
+}
