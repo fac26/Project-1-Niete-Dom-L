@@ -5,6 +5,7 @@ How to run our code:
 2. You can view the live page by clicking here: [View live page](https://fac26.github.io/Project-1-Niete-Dom-L/) and inspecting the page elements
 
 Task Overview
+
 Our challenge is to build an agency website as a team.
 
 The website should give potential clients:
